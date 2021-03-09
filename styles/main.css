@@ -24,7 +24,7 @@ body {
 }
 h1{
   font-size: 300%;
-  margin-left: 15px;
+  margin-left: 1em;
   margin-top: 15px;
 }
 header {
@@ -45,10 +45,35 @@ header h3 {
 }
 header img{
   float: left;
-  margin-left: 10px;
-  margin-right: 20px;
+  margin-left: .5em;
+  margin-right: 1.5em;
 }
-/*Horizontal Menu Bar Style*/
+/* Horizontal Menu Bar - W3 float and block */
+#nav_menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: steelblue;
+}
+#nav_menu li {
+  float: left;
+}
+#nav_menu #about{
+  float: right;
+}
+#nav_menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 1.5em;
+  text-decoration: none;
+}
+#nav_menu li a:hover {
+  background-color: lightsteelblue;
+  color: black;
+}
+/*Horizontal Menu Bar Style - inline NavBar style
 #nav_menu ul {
   list-style: none;
   text-align: center;
@@ -72,6 +97,7 @@ header img{
 #nav_menu ul li a:hover {
   color: red
 }
+*/
 /* Vertical Navigation List */
 #nav_list ul {
   list-style: none;
@@ -94,13 +120,14 @@ header img{
 }
 section h2, section h3, aside h2{
   font-size: 150%;
+  margin-left: .5em;
 }
 section p {
-  margin: 15px;
+  margin: 1em;
 }
 section blockquote {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 3em;
+  margin-right: 3em;
   font-size: 90%;
   color: navy;
   border-left: 3px solid maroon;
@@ -110,8 +137,8 @@ section blockquote {
 section h2, section h3 {
   margin-left: 15px;
 }
-aside h2 {
-  margin-left: 15px;
+aside ul {
+  margin-left: .2em;
 }
 main {
   clear: both;
@@ -184,7 +211,28 @@ footer p {
   font-size: 75%;
   text-align: center;
   color: white;
-  padding: 25px;
+  padding: 2em;
   font-weight: bold;
   font-variant: small-caps;
+}
+
+#mobilemenu {
+  display: none;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .homesection {
+    float: none;
+    width: 100%;
+  }
+  .sidebar {
+    width: 100%;
+  }
+
+}
+@media only screen and (max-width: 400px) {
+
 }
