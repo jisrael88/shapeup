@@ -1,19 +1,31 @@
+/* Universal Selector*/
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+html {
+  background-image: url("../images/paper.gif");
 }
 body {
+    background-color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
     width: 100%;
-    max-width: 850px;
+    max-width: 960px;
     margin: 0 auto;
     border: 5px solid steelblue;
     box-shadow: 5px 5px 8px grey;
 }
 h1{
   font-size: 300%;
-  margin-left: 15px;
+  margin-left: 1em;
+  margin-top: 15px;
 }
 header {
   border-bottom: 5px solid steelblue;
@@ -31,15 +43,91 @@ header h3 {
     margin-top: 10px;
     margin-bottom: 15px;
 }
+header img{
+  float: left;
+  margin-left: .5em;
+  margin-right: 1.5em;
+}
+/* Horizontal Menu Bar - W3 float and block */
+#nav_menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: steelblue;
+}
+#nav_menu li {
+  float: left;
+}
+#nav_menu #about{
+  float: right;
+}
+#nav_menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 1.5em;
+  text-decoration: none;
+}
+#nav_menu li a:hover {
+  background-color: lightsteelblue;
+  color: black;
+}
+/*Horizontal Menu Bar Style - inline NavBar style
+#nav_menu ul {
+  list-style: none;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 8px 0;
+  background-color: steelblue;
+}
+#nav_menu ul li {
+  display: inline;
+  padding: 5px 20px;
+  border-right: 3px solid black;
+}
+#nav_menu ul li a {
+  text-decoration: none;
+  font-weight: bold;
+}
+#nav_menu #last {
+  border-right: none;
+}
+#nav_menu ul li a:hover {
+  color: red
+}
+*/
+/* Vertical Navigation List */
+#nav_list ul {
+  list-style: none;
+}
+#nav_list ul li {
+  border: 2px solid black;
+  width: 90%;
+}
+#nav_list ul li a {
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: lightsteelblue;
+  padding: .5em;
+  color: black;
+}
+#nav_list ul li a:hover {
+  background-color: steelblue;
+  color: white;
+}
 section h2, section h3, aside h2{
   font-size: 150%;
+  margin-left: .5em;
 }
 section p {
-  margin: 15px;
+  margin: 1em;
 }
 section blockquote {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 3em;
+  margin-right: 3em;
   font-size: 90%;
   color: navy;
   border-left: 3px solid maroon;
@@ -49,16 +137,12 @@ section blockquote {
 section h2, section h3 {
   margin-left: 15px;
 }
-aside h2 {
-  margin-left: 15px;
+aside ul {
+  margin-left: .2em;
 }
-
-header img{
-  float: left;
-  margin-left: 10px;
-  margin-right: 20px;
+main {
+  clear: both;
 }
-
 /*link colors for section*/
 /* unvisited link */
   section a:link {
@@ -98,22 +182,57 @@ header img{
 aside a {
   font-weight: bold;
 }
+.homesection {
+  width: 70%;
+  float: right;
+}
 
-li {
+.sidebar {
+  width: 33%;
+  padding-top: 30px;
+}
+.sidebar h2 {
+  color: maroon;
+}
+
+aside li {
   margin-top: 5px;
-  margin-left: 20px; 
+  margin-left: 10px;
+  margin-right: 25px;
   margin-bottom: 10px;
 }
 
 footer {
   background-color: steelblue;
+  clear: both;
 }
 
 footer p {
   font-size: 75%;
   text-align: center;
   color: white;
-  padding: 25px;
+  padding: 2em;
   font-weight: bold;
   font-variant: small-caps;
+}
+
+#mobilemenu {
+  display: none;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .homesection {
+    float: none;
+    width: 100%;
+  }
+  .sidebar {
+    width: 100%;
+  }
+
+}
+@media only screen and (max-width: 400px) {
+
 }
