@@ -219,10 +219,6 @@ footer p {
 #mobilemenu {
   display: none;
 }
-
-
-
-
 @media only screen and (max-width: 600px) {
   .homesection {
     float: none;
@@ -231,7 +227,15 @@ footer p {
   .sidebar {
     width: 100%;
   }
-
+  #nav_menu {
+    display: none;
+  }
+  #mobilemenu {
+    display: block;
+  }
+  .slicknav_menu {
+    background-color: steelblue !important;
+  }
 }
 @media only screen and (max-width: 400px) {
 
